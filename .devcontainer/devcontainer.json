@@ -1,0 +1,13 @@
+{
+  "build": { "dockerfile": "Dockerfile" },
+  "extensions": ["matklad.rust-analyzer"],
+  "name": "Cloudflare Workers",
+  "forwardPorts": [8787, 8976],
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/rusty/.ssh,type=bind",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.wrangler/config,target=/home/rusty/.wrangler/config,type=bind",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.wrangler/version.toml,target=/home/rusty/.wrangler/version.toml,type=bind",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/rusty/.gitconfig,type=bind"
+  ],
+  "postCreateCommand": "cargo install wrangler"
+}
