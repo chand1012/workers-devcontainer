@@ -8,6 +8,6 @@
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.wrangler/config,target=/home/rusty/.wrangler/config,type=bind",
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.wrangler/version.toml,target=/home/rusty/.wrangler/version.toml,type=bind",
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/rusty/.gitconfig,type=bind"
-  ],
-  "postCreateCommand": "cargo install wrangler"
+  ]
+  // "postCreateCommand": "cargo install wrangler"
 }
